@@ -1,0 +1,38 @@
+{
+  "name": "tanstack-router-example-react-start-basic",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "lint": "prettier --check '**/*' --ignore-unknown && eslint --ext .ts,.tsx ./app",
+    "format": "prettier --write '**/*' --ignore-unknown",
+    "test:e2e": "playwright test --project=chromium"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.57.10",
+    "@tanstack/router-devtools": "^1.57.10",
+    "@tanstack/start": "^1.57.10",
+    "@typescript-eslint/parser": "^7.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "redaxios": "^0.5.1",
+    "tailwind-merge": "^2.4.0",
+    "vinxi": "0.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@tailwindcss/postcss": "next",
+    "postcss": "^8.4.45",
+    "prettier": "^3.3.3",
+    "tailwindcss": "next",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.4"
+  },
+  "packageManager": "pnpm@9.9.0"
+}
