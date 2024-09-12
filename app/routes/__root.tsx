@@ -41,7 +41,7 @@ export const Route = createRootRoute({
     { rel: 'icon', href: '/favicon.ico' },
   ],
   beforeLoad: async () => {
-    // Set userId in Router Context
+    // Set userId in Route Context
     const userId = await getCurrentUser()
     return { userId }
   },
