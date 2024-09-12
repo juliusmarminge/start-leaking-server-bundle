@@ -6,6 +6,7 @@ import * as React from 'react'
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary'
 import { NotFound } from '../components/NotFound'
 import appCss from '../styles/app.css?url'
+import { getCurrentUser } from '../utils/auth'
 
 export const Route = createRootRoute({
   meta: () => [
@@ -39,6 +40,11 @@ export const Route = createRootRoute({
     { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
     { rel: 'icon', href: '/favicon.ico' },
   ],
+  beforeLoad: async () => {
+    // Set userId in Router Context
+    const userId = await getCurrentUser()
+    return { userId }
+  },
   errorComponent: (props) => {
     return (
       <RootDocument>
